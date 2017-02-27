@@ -326,7 +326,8 @@ class Board(object):
             legal_player_moves = self.get_legal_moves()
 
             game_copy = self.copy()
-
+            if show is True:
+                print("\nNew state:\n{}".format(self.to_string()))   ## The if statement added by suggestion of khrm to view board while playing
             move_start = curr_time_millis()
             time_left = lambda : time_limit - (curr_time_millis() - move_start)
             curr_move = self.active_player.get_move(game_copy, legal_player_moves, time_left)
