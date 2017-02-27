@@ -256,7 +256,7 @@ if __name__ == "__main__":
 
     # play the remainder of the game automatically -- outcome can be "illegal
     # move" or "timeout"; it should _always_ be "illegal move" in this example
-    winner, history, outcome = game.play()
+    winner, history, outcome = game.play(100000000, show = True)   ##  Modified this line to make game visible
     print("\nWinner: {}\nOutcome: {}".format(winner, outcome))
     print(game.to_string())
     print("Move history:\n{!s}".format(history))
